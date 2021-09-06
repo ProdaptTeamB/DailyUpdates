@@ -1,0 +1,98 @@
+{% extends 'header.html'%}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+        <form action="http://127.0.0.1:8000/employee/updatesearchapi/" method="post">
+            <table class="table">
+                <tr>
+                    <td>Employee Code</td>
+                    <td><input name="empcode" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn btn-success">SEARCH</button></td>
+                </tr>
+    
+
+            </table>
+        </form>
+        
+
+            {% if data %}
+            <form action="http://127.0.0.1:8000/employee/updateactionapi/" method="POST">
+            <table class="table">
+                {% for i in data %}
+                <tr>
+                    <td></td>
+                    <td> <input name="newid" value="{{i.id}}" type="hidden" class="formcontrol" readonly> </td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input name="newname" value="{{i.name}}" type="text" class="formcontrol"></td>
+                </tr>
+                <tr>
+                    <td>DateOfJoining</td>
+                    <td><input name="newdoj" value="{{i.dateofjoining}}" type="text" class="formcontrol"></td>
+                </tr>  
+                <tr>
+                    <td>DateOfBirth</td>
+                    <td><input name="newdob" value="{{i.dateofbirth}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>PhoneNumber</td>
+                    <td><input name="newphonenumber" value="{{i.phonenumber}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Aadhaar Number</td>
+                    <td><input name="newaadhaarno" value="{{i.aadhaarno}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Pincode</td>
+                    <td><input name="newpincode" value="{{i.pincode}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td><input name="newsalary" value="{{i.salary}}" type="text" class="formcontrol"></td>
+                </tr>
+                <tr>
+                    <td>Employee Code</td>
+                    <td><input name="newempcode" value="{{i.empcode}}" type="text" class="formcontrol"></td>
+                </tr>
+                <tr>
+                    <td>EmailId</td>
+                    <td><input name="newemailid" value="{{i.emailid}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input name="newaddress" value="{{i.address}}" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input name="newgender" value="{{i.gender}}" type="text" class="formcontrol"></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input name="newusername" value="{{i.username}}" type="text" class="formcontrol"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input name="newpassword" value="{{i.password}}" type="text" class="formcontrol"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button  type="submit" class="btn btn-secondary">UPDATE</button></td>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </form>
+           
+
+            {% endif %}
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+</div>
+{% endblock %}

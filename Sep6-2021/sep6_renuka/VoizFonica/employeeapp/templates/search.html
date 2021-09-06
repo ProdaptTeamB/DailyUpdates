@@ -1,0 +1,79 @@
+{% extends 'header.html'%}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+        <form action="http://127.0.0.1:8000/employee/search/" method="post">
+            <table class="table">
+                <tr>
+                    <td>Employee Code</td>
+                    <td><input name="empcode" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn btn-success">SEARCH</button></td>
+                </tr>
+    
+
+            </table>
+        </form>
+        </div>
+
+            {% if data %}
+            <table class="table">
+                {% for i in data %}
+                <tr>
+                    <td>Name</td>
+                    <td>{{i.name}}</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>{{i.address}}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{i.gender}}</td>
+                </tr>
+                <tr>
+                    <td>Pincode</td>
+                    <td>{{i.pincode}}</td>
+                </tr>
+                <tr>
+                    <td>Date Of Joining</td>
+                    <td>{{i.dateofjoining}}</td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td>{{i.dateofbirth}}</td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>{{i.phonenumber}}</td>
+                </tr><tr>
+                    <td>Aadhaar Number</td>
+                    <td>{{i.aadhaarno}}</td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td>{{i.salary}}</td>
+                </tr>
+                <tr>
+                    <td>EmpCode</td>
+                    <td>{{i.empcode}}</td>
+                </tr>
+                <tr>
+                    <td>EmailId</td>
+                    <td>{{i.emailid}}</td>
+                </tr>
+                
+                {% endfor %}
+
+            </table>
+           
+
+            {% endif %}
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+</div>
+{% endblock %}

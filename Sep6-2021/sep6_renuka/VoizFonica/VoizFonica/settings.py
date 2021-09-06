@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#odo!s#s$=$=j02&_9p08wknx^6v4ck^ewvulk7np5+1y#yhxc'
+SECRET_KEY = 'django-insecure-4jne05@5gbhw#zrm(byue65-rf^i0!4h^5eckqw069hx2x-@n@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,9 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Admin',
-    'rest_framework',
-
+    'employeeapp',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -79,10 +78,11 @@ WSGI_APPLICATION = 'VoizFonica.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'VoizSystemDB',
-        'CLIENT':{'host':'mongodb+srv://TeamB:Teamb@2@cluster0.nxvey.mongodb.net/',
+        'NAME': 'voizfonicadb',
+        'CLIENT':{
+        'host':'mongodb+srv://TeamB:Teamb2@cluster0.nxvey.mongodb.net',
         'username':'TeamB',
-        'password':'Teamb@2',
+        'password':'Teamb2',
         }
     }
 }
