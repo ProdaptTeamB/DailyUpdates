@@ -1,0 +1,62 @@
+
+
+{% extends 'headeremploye.html' %} 
+
+{% block myContent %}
+
+<!-- <style>
+  body{
+      background: linear-gradient(white,#A83279) ;
+    height: 100vh;
+  }
+</style> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+    <table class="table table-borderless">
+      <thead class="table">
+        <tr>
+          <th style="color: blue;">Employee code</th>
+          <th style="color: blue;">Name</th>
+          <th style="color: blue;">Address</th>
+          <th style="color: blue;">Salary</th>
+          <th style="color: blue;">DateOfJoining</th>
+          <th style="color: blue;">DateOfBirth</th>
+          <th style="color: blue;">Phonenumber</th>
+          <th style="color: blue;">Pincode</th>
+          <th style="color: blue;">Aadhaar Number</th>
+          <th style="color: blue;">Gender</th>
+          <th style="color: blue;">Emailid</th>
+        </tr>
+      </thead>
+      {% for i in data %}
+      <tbody>
+        <tr>
+          <td>{{i.empcode   }}</td>
+          <td>{{i.name  }}</td>
+          <td>{{i.address  }}</td>
+          <td>{{i.salary  }}</td>
+          <td>{{i.dateofjoining  }}</td>
+          <td>{{i.dateofbirth  }}</td>
+          <td>{{i.phonenumber }}</td>
+          <td>{{i.pincode  }}</td>
+          <td>{{i.aadhaarno  }}</td>
+          <td>{{i.gender  }}</td>
+          <td>{{i.emailid  }}</td>
+        </tr>
+      {% endfor %}
+
+      </tbody>
+    
+
+    </table>
+    </div>
+    
+
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+  </div>
+</div>
+{% endblock %}

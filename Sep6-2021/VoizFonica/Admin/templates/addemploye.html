@@ -1,0 +1,91 @@
+
+
+{% extends 'headeremploye.html' %} 
+
+{% block myContent %}
+
+<!-- <style>
+  body{
+      background: linear-gradient(white,#A83279) ;
+    height: 100vh;
+  }
+</style> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2">
+
+    </div>
+    <div class="col col-12 col-sm-8 col-md-8">
+      <form action="http://127.0.0.1:8000/Admin/eadd/" method="post">
+
+        <table class="table table-boarderless">
+          <tr>
+            <td>Employee code</td>
+            <td><input name="empcode" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td><input name="name" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td><input name="address" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Salary</td>
+            <td><input name="salary" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>EmailId</td>
+            <td><input name="emailid" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Phone Number</td>
+            <td><input name="phonenumber" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Aadhaar Number</td>
+            <td><input name="aadhaarno" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Date Of Joining</td>
+            <td><input name="dateofjoining" type="date" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Date Of Birth</td>
+            <td><input name="dateofbirth" type="date" class="form-control"></input></td>
+          </tr>
+          <tr>
+            <td>Pincode</td>
+            <td><input name="pincode" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td><input name="gender" type="radio" value="male" >Male
+              <input name="gender" type="radio" value="female" >Female
+              <input name="gender" type="radio" value="others" >Others</td>
+          </tr>
+          <tr>
+            <td>UserName</td>
+            <td><input name="username" type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input name="password" type="text" class="form-control"></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><center>   <button type="submit" class="btn btn-success">SEND</button></center>  </td>
+          </tr>
+          <div class="col col-12 col-sm-2 col-md-2">
+
+          </div>
+
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

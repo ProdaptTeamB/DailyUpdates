@@ -1,0 +1,82 @@
+{% extends 'headercustomer.html' %}
+
+{% block mycontent %}
+<!-- <style>
+    body{
+        background-image: linear-gradient(#D38312,yellow );
+        height: 100vh;
+      }
+    </style> -->
+
+    <div class="container">
+        <div class="row">
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+                <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <h1 style="color: pink ; font-size: large; font-style: initial;" >SEARCH</h1>
+ 
+                    <form action="http://127.0.0.1:8000/Admin/searchapi/" method="post">
+
+                      <table class="table table-borderless" class="form-control">
+                        <tr>
+                            <td>Mobile no</td>
+                            <td><input name="mobileno" type="number" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button  type="submit" class="btn btn-primary">SEARCH</button></td>
+                        </tr>
+                       </table>
+                    </form>
+                         {% if data %}    
+                         <table class="table table-borderless">
+                            {% for i in data %}
+
+                            <tr>
+                                <td>name</td>
+                                <td>{{i.name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Username</td>
+                                <td>{{i.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>{{i.purchase_date}}</td>
+                            </tr>
+                            <tr>
+                                <td>Product type</td>
+                                <td>{{i.product_type}}</td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>{{i.gender}}</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>{{i.address}}</td>
+                            </tr>
+                            <tr>
+                                <td>Pincode</td>
+                                <td>{{i.pincode}}</td>
+                            </tr>
+                            <tr>
+                                <td>Mobileno</td>
+                                <td>{{i.mobileno}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>{{i.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Adharno</td>
+                                <td>{{i.adharno}}</td>
+                            </tr>
+                           
+                            {% endfor %}
+                         </table> 
+                            {% endif %}
+                    </div>
+                    <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            </div>
+        </div>  
+{% endblock %}

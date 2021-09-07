@@ -80,9 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'VoizSystemDB',
-        'CLIENT':{'host':'mongodb+srv://TeamB:Teamb@2@cluster0.nxvey.mongodb.net/',
-        'username':'TeamB',
-        'password':'Teamb@2',
+        'CLIENT':{
+            'host':'mongodb+srv://TeamB:Teamb2@cluster0.nxvey.mongodb.net',
+            'username':'TeamB',
+            'password':'Teamb2',
         }
     }
 }
