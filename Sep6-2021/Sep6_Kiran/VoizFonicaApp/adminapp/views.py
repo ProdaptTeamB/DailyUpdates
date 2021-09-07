@@ -32,6 +32,7 @@ def viewQuery(request):
 
 
 def QueryAdd(request):
+<<<<<<< HEAD
     return render(request,'queryregister.html')
 
 def viewQuerys(request):
@@ -40,6 +41,16 @@ def viewQuerys(request):
 
 def searchQuerys(request):
     return render(request,'querysearch.html')
+=======
+    return render(request,'register.html')
+
+def viewQuerys(request):
+    fetchdata=requests.get("http://127.0.0.1:8000/adminapp/viewall/").json()
+    return render(request,'view.html',{"data":fetchdata})
+
+def searchQuerys(request):
+    return render(request,'search.html')
+>>>>>>> 213d486364877c19bc548023c6a78485cbc72275
 
 def Feedbacksearch(request):
     return render(request,'searchfeedback.html')
@@ -57,7 +68,11 @@ def searchapi(request):
         getdate=request.POST.get("date")
         getQuery=Query.objects.filter(date=getdate)
         query_serialize=QuerySerializer(getQuery,many=True)
+<<<<<<< HEAD
         return render(request,"querysearch.html",{"data":query_serialize.data})
+=======
+        return render(request,"search.html",{"data":query_serialize.data})
+>>>>>>> 213d486364877c19bc548023c6a78485cbc72275
         #return JsonResponse(query_serialize.data,safe=False)
     except Query.DoesNotExist:
         return HttpResponse("Invalid Date")
