@@ -1,0 +1,75 @@
+{% extends 'headercustomer.html' %}
+
+{% block mycontent %}
+<!-- <style>
+    body{
+        background-image: linear-gradient(#D38312,yellow );
+        height: 100vh;
+      }
+    </style> -->
+
+    <div class="container">
+        <div class="row">
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+                <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <h1 style="color: pink ; font-size: large; font-style: initial;" >SEARCH</h1>
+ 
+                    <form action="http://127.0.0.1:8000/Admin/viewproductapi/" method="post">
+
+                      <table class="table table-borderless" class="form-control">
+                        <tr>
+                            <td>Product type</td>
+                            <td><select name="product_type" id="" class="form-control">           
+                                <option value="Pre-paid">Pre-paid</option>
+                                <option value="Postpaid">Postpaid</option>
+                                <option value="Dongle">Dongle</option>
+                                </select></td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button  type="submit" class="btn btn-primary">SEARCH</button></td>
+                        </tr>
+                        <table class="table table-striped">
+                            <thead class="table-dark">
+                              <tr>
+                                <th>name</th>
+                                <th>DOB</th>
+                                <th>Username</th>
+                                <th>purchase Date</th>
+                                <th>Product type</th>
+                                <th>Gender</th>
+                                <th>Address</th>
+                                <th>pincode</th>
+                                <th>Mobileno</th>
+                                <th>Email</th>
+                                <th>Adharno</th>
+                               
+                              </tr>
+                            </thead>
+              
+                            <tbody>
+                              {% for i in data %}
+                            <tr>
+                              <td>{{i.name}}</td>
+                              <td>{{i.DOB}}</td>
+                              <td>{{i.username}}</td>
+                              <td>{{i.purchase_date}}</td>
+                              <td>{{i.product_type}}</td>
+                              <td>{{i.gender}}</td>
+                              <td>{{i.address}}</td>
+                              <td>{{i.pincode}}</td>
+                              <td>{{i.mobileno}}</td>
+                              <td>{{i.email}}</td>
+                              <td>{{i.adharno}}</td>
+                             
+                            </tr>  
+                               {% endfor %}
+                            </tbody>
+                      
+                      </table>   
+                    </div>
+                    <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            </div>
+        </div>  
+{% endblock %}

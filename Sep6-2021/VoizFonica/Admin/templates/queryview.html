@@ -1,0 +1,52 @@
+
+{% extends 'queryheader.html' %}
+
+{% block mycontent %}
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+
+        </div>
+        <style>
+            table, th, td {
+              border:1px solid black;
+            }
+            </style>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <table class="table table-striped style=width:100%">
+                <thead class="table-danger">
+                    <tr>
+                        <th> Customer Name </th>
+                        <th> PhoneNumber </th>
+                        <th> Email_Id </th>
+                        <th> Date </th>
+                        <th> Selected Query </th>
+                        <th> Message </th>
+                    </tr>
+                    <tbody>
+                        {% for i in data %}
+                        <tr>
+                            <td> {{i.name }}  </td>
+                            <td> {{i.phone_no}} </td>
+                            <td> {{i.email_id}} </td>
+                            <td> {{i.date}} </td>
+                            <td> {{i.selectquery}} </td>
+                            <td> {{i.message}} </td>
+                        </tr>
+                      {%  endfor %}
+                    </tbody>
+                </thead>
+            </table>
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

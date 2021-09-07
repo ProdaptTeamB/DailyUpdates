@@ -1,0 +1,93 @@
+{% extends 'headercustomer.html' %}
+
+{% block mycontent %}
+
+<!-- <style>
+    body{
+        background-image: linear-gradient(pink,green);
+        height: 100vh;
+      }
+    </style> -->
+
+
+
+    <div class="container">
+        <div class="row">
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+                <div class="col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <h1 style="color: blue ; font-size: large; font-style: italic;" >ADD DETAILS</h1>
+
+                    <form action="http://127.0.0.1:8000/Admin/addcustomer/" method="post">
+                      <table class="table table-borderless" class="form-control">
+                        
+                        <tr>
+                            <td>name</td>
+                            <td><input  name="name" type="text" class="form-control"></td>
+                        </tr>
+                          
+                        <tr>
+                            <td>DOB</td>
+                            <td><input  name="DOB" type="date" class="form-control"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Username</td>
+                            <td><input  name="username" type="text" class="form-control"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>password</td>
+                            <td><input  name="password" type="password" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Purchase Date</td>
+                            <td><input  name="purchase_date" type="date" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>product type</td>
+                            <td><select name="product_type" id="" class="form-control">           
+                                <option value="Pre-paid">Pre-paid</option>
+                                <option value="Postpaid">Postpaid</option>
+                                <option value="Dongle">Dongle</option>
+                                </select></td>
+
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td><input name="gender" type="radio" value="male" >Male
+                                <input name="gender" type="radio" value="female" >Female
+                                <input name="gender" type="radio" value="others" >Others</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td><input name="address" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Pincode</td>
+                            <td><input name="pincode" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Mobileno</td>
+                            <td><input name="mobileno" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Adharno</td>
+                            <td><input name="adharno" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input name="email" type="email" class="form-control"></td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td></td>
+                            <td><button  class="btn btn-success">ADD</button></td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+                <div class="col col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>   
+{% endblock %}
